@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title>Hulk</title>
+  </head>
+  <body>
+    <h3>Hulk</h3>
+    <img src="/images/hulk.jpg" alt="">
+
+    
+  </body>
+</html>
+
+
+
+
+
+var express = require('express');
+var router = express.Router();
+
+/* GET home page. */
+router.get('/', function(req, res, next) {
+  res.render('index', { title: 'Express' });
+});
+
+
+router.get('\hola',( req,res,next)=>{
+  console.log('Saludando');
+  res.send("<h1> Saludos desde el backend </h1>");
+} );
+
+module.exports = router;
